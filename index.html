@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Starfruit</title>
+    
+        <script src="https://cdn.tailwindcss.com"></script>
+        
+        <!-- 1. REMOVED the Google Fonts link from here -->
+    
+        <!-- NEW COLOR & FONT PALETTE -->
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            'retro-bg': '#f7ce39',     
+                            'nathan-purple': '#6D4DBD',     
+                            'nathan-orange': '#F7BE20',     
+                            'nathan-border': '#FFA736',     
+                            'nathan-gradient': '#4AA1E8',     
+                            'retro-ink': '#2C2A28',    
+                            'retro-white': '#f0e2c3',    
+                            'retro-yellow': '#F2B829', 
+                            'retro-coral': '#E96A59',  
+                            'retro-coral2': '#e0f6ff', 
+                            'retro-blue': '#5C8EBD'    
+                        },
+                        fontFamily: {
+                            // 3. TELL TAILWIND TO USE YOUR NEW FONT
+                            // Change 'mono' if you want it applied to all your retro headers/buttons
+                            // Change 'sans' if you want it applied to your normal paragraph text
+                            'mono': ['"My Cool Font"', 'monospace'],
+                            'sans': ['Inter', 'sans-serif'], // (Leave as Inter or change to another local font)
+                        }
+                    }
+                }
+            }
+        </script>
+    
+        <style>
+            /* 2. IMPORT YOUR LOCAL FONT FILE HERE */
+            @font-face {
+                font-family: 'My Cool Font'; /* You can name this whatever you want */
+                src: url('fonts/JumperPERSONALUSEONLY-Black.ttf') format('truetype'); /* Change this to your exact file name! */
+                font-weight: normal;
+                font-style: normal;
+                font-display: swap;
+            }
+    
+            body {
+                background-color: #f0e8c3;
+                background-image: 
+                    linear-gradient(rgba(44, 42, 40, 0.04) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(44, 42, 40, 0.04) 1px, transparent 1px);
+                background-size: 50px 50px;
+            }
+        </style>
+    </head>
+
+<!-- Body uses the new paper background and charcoal text. The top border is now the coral-red accent. -->
+<nav class="sticky top-0 z-50 bg-[linear-gradient(to_bottom,#7CCDD9,#4AA1E8,#FF8E2B,#FFB82B,transparent)] pb-4">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-nathan-orange/90 backdrop-blur-sm border-b-2 border-retro-ink">
+        <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row justify-between items-center font-mono uppercase font-bold">
+            <a href="index.html" class="text-5xl tracking-tight mb-4 md:mb-0 flex items-center gap-2">
+                <!-- Small decorative circle mimicking the target icons in your poster -->
+                <span class="w-4 h-4 rounded-full border-2 border-retro-bg inline-block flex items-center justify-center">
+                    <span class="w-1 h-1 bg-retro-bg rounded-full"></span>
+                </span>
+                Starfruit
+            </a>
+
+            <div class="flex gap-8 text-lg">
+                <a href="#about" class="hover:text-retro-coral transition-colors">About</a>
+                <a href="#projects" class="hover:text-retro-coral transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-retro-coral transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto w-full px-6 py-12 flex-grow">
+
+        <!-- 2. ABOUT SECTION -->
+         
+        <section id="about" class="mb-8 relative">
+            <!-- Used the Coral color for section headers to mimic the "ANALOG CASSETTE SYSTEM" text -->
+            <h2 class="w-fit bg-retro-white border-4 border-retro-ink shadow-[6px_6px_0px_#2C2A28] p-4 font-mono text-3xl text-retro-ink uppercase font-bold mb-8">
+                (About)
+            </h2>               
+            
+            </div>
+        </section>
+<!-- 1. HERO ARTWORK SECTION -->
+<section class="w-full border-4 border-retro-ink bg-retro-white relative p-6 pt-16 md:p-12 md:pt-16 mb-24 shadow-[8px_8px_0px_#2C2A28]">
+    
+    <!-- Decorative corner elements -->
+    <div class="absolute top-4 left-4 flex gap-2">
+        <div class="w-3 h-3 bg-retro-coral rounded-full"></div>
+        <div class="w-3 h-3 bg-retro-yellow rounded-full border border-retro-ink"></div>
+        <div class="w-3 h-3 bg-retro-blue rounded-full"></div>
+    </div>
+
+    <!-- TEXT SECTION: Now independent so boxes fall below it -->
+    <div class="w-full mb-12"> 
+        <p class="text-xl md:text-2xl text-retro-ink leading-relaxed font-semibold max-w-3xl">
+            Starfruit is a Chicago based Music Production Duo that specializes in video game music. 
+        </p>
+    </div>
+
+    <!-- PHOTO GRID: Now located directly below the text -->
+    <div class="flex flex-col md:flex-row gap-8 w-full">
+        
+        <!-- PHOTO SPOT 1 -->
+        <div class="flex-1 border-2 border-retro-ink bg-retro-bg p-3 shadow-[4px_4px_0px_#2C2A28] flex flex-col hover:-translate-y-1 transition-transform">
+            <div class="w-full aspect-square md:aspect-[4/3] bg-retro-ink/5 border-2 border-dashed border-retro-ink flex items-center justify-center overflow-hidden">
+                <img src="Penngo.png" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="mt-4 font-mono">
+                <h3 class="text-retro-ink font-bold uppercase border-b-2 border-retro-ink pb-1 mb-2">Nathan Cheng</h3>
+                <p class="text-sm text-retro-ink font-medium leading-relaxed">
+                    Composer and producer, speacializes in writing and scoring compositions.
+                </p>
+            </div>
+        </div>
+
+        <!-- PHOTO SPOT 2 -->
+        <div class="flex-1 border-2 border-retro-ink bg-retro-bg p-3 shadow-[4px_4px_0px_#2C2A28] flex flex-col hover:-translate-y-1 transition-transform">
+            <div class="w-full aspect-square md:aspect-[4/3] bg-retro-ink/5 border-2 border-dashed border-retro-ink flex items-center justify-center overflow-hidden">
+                <img src="MyTrumpCard5.png" class="w-full h-full object-cover">
+            </div>
+            
+            <div class="mt-4 font-mono">
+                <h3 class="text-retro-ink font-bold uppercase border-b-2 border-retro-ink pb-1 mb-2">Michael Chen</h3>
+                <p class="text-sm text-retro-ink font-medium leading-relaxed">
+                    Composer & Engineer. Specializes in mixing, mastering, and sound design.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- THIS IS THE NEW BUTTON SECTION -->
+        <!-- ========================================== -->
+        <section class="mb-24 text-center">
+            <a href="music.html" class="inline-block bg-retro-ink text-retro-bg border-4 border-retro-ink shadow-[8px_8px_0px_#F2B829] p-6 font-mono text-3xl uppercase font-bold hover:bg-retro-coral hover:shadow-[8px_8px_0px_#2C2A28] hover:-translate-y-1 transition-all">
+                Explore Music Portfolio
+            </a>
+        </section>
+        <!-- 3. PROJECTS SECTION -->
+        <section id="projects" class="mb-24">
+            <h2 class="w-fit bg-retro-bg border-4 border-retro-ink shadow-[6px_6px_0px_#2C2A28] p-4 font-mono text-3xl text-retro-ink uppercase font-bold mb-8">
+                (Projects)
+            </h2>     
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                
+                <!-- Project Card 1 -->
+                <div class="bg-retro-bg border-4 border-retro-ink p-6 hover:-translate-y-1 transition-transform duration-300 shadow-[6px_6px_0px_#2C2A28]">
+                    
+                    <div class="w-full aspect-square md:aspect-[4/3] bg-retro-ink/5 border-2 border-retro-ink flex items-center justify-center overflow-hidden">
+                        <video 
+                            src="combatpreview.mp4" 
+                            muted 
+                            loop 
+                            playsinline
+                            class="w-full h-full object-cover"
+                            onmouseenter="this.play()" 
+                            onmouseleave="this.pause()"
+                        >
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <h3 class="font-mono text-2xl text-retro-ink font-bold mb-2 uppercase">Overheat OST</h3>
+                    <p class="text-retro-ink/80 mb-6 font-medium">Complete original soundtrack and dynamic audio implementation for an upcoming indie martial arts game .</p>
+                    
+                    <div class="flex gap-3 font-mono text-sm font-bold">
+                        <!-- Colored chips matching the buttons on the cassette -->
+                        <span class="px-3 py-1 bg-retro-yellow text-retro-ink border-2 border-retro-ink">Audio Design</span>
+                        <span class="px-3 py-1 bg-retro-coral text-white border-2 border-retro-ink">Composition</span>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                
+
+            </div>
+        </section>
+
+        <!-- 4. CONTACT SECTION -->
+        <section id="contact" class="mb-12">
+            <div class="border-4 border-retro-ink bg-retro-white p-8 md:p-12 relative shadow-[8px_8px_0px_#2C2A28]">
+                
+                 <h2 class="font-mono text-3xl text-retro-ink uppercase font-bold mb-4">(Contact)</h2>
+                <p class="text-retro-ink/80 font-medium mb-8 max-w-xl">You can reach me via email at: DreamLineBeats@gmail.com</p>
+
+               <!-- <form class="flex flex-col gap-6 max-w-2xl font-mono">
+                    <div class="flex flex-col">
+                        <label class="font-bold text-retro-coral mb-2 uppercase text-sm">>> Input Name</label>
+                        <input type="text" class="bg-transparent border-b-4 border-retro-ink p-2 focus:outline-none focus:border-retro-coral transition-colors" placeholder="ENTER NAME">
+                    </div>
+
+                    <div class="flex flex-col">
+                        <label class="font-bold text-retro-coral mb-2 uppercase text-sm">>> Input Message</label>
+                        <textarea rows="4" class="bg-transparent border-4 border-retro-ink p-4 focus:outline-none focus:border-retro-coral transition-colors resize-none" placeholder="ENTER MESSAGE..."></textarea>
+                    </div>
+
+                    <button type="button" class="w-fit bg-retro-ink text-retro-bg font-bold uppercase text-xl px-10 py-4 hover:bg-retro-coral hover:text-white transition-colors flex items-center gap-3">
+                        SEND <span class="text-2xl leading-none">↗</span>
+                    </button>
+                </form>
+            </div> -->
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Designed to exactly mimic the heavy yellow bottom block of the poster -->
+    <footer class="bg-retro-yellow text-retro-ink border-t-4 border-retro-ink p-8 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end font-mono font-bold uppercase">
+            
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center gap-2 mb-2 text-xl">
+                    <span class="bg-retro-ink text-retro-yellow px-2 py-0.5">⚠</span> Michael Chen x Nathan Cheng
+                </div>
+            
+            </div>
+
+            <div class="flex flex-col items-end">
+                <div class="flex gap-6 mb-4 text-lg">
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">YouTube</a>
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">SoundCloud</a>
+                </div>
+                
+                <!-- Fake barcode/serial for extra aesthetic -->
+                <div class="flex items-end gap-4 mt-4">
+                    <div class="text-xs text-right">
+                        <p>© 2026</p>
+                    </div>
+                    <div class="flex gap-1 h-8 opacity-80">
+                        <div class="w-1 bg-retro-ink"></div><div class="w-2 bg-retro-ink"></div><div class="w-1 bg-retro-ink"></div><div class="w-3 bg-retro-ink"></div><div class="w-1 bg-retro-ink"></div><div class="w-2 bg-retro-ink"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
