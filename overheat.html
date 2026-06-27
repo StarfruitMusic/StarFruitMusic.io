@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overheat - Starfruit Audio Case Study</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- NEW COLOR & FONT PALETTE -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'retro-bg': '#f7ce39',     
+                        'nathan-purple': '#6D4DBD',     
+                        'nathan-orange': '#F7BE20',     
+                        'nathan-border': '#FFA736',     
+                        'nathan-gradient': '#4AA1E8',     
+                        'retro-ink': '#2C2A28',    
+                        'retro-white': '#f0e2c3',    
+                        'retro-yellow': '#F2B829', 
+                        'retro-coral': '#E96A59',  
+                        'retro-coral2': '#e0f6ff', 
+                        'retro-blue': '#5C8EBD',
+                        // Adding a dark red specific to the Overheat branding from the pitch deck
+                        'overheat-red': '#E62E2E'
+                    },
+                    fontFamily: {
+                        'mono': ['"My Cool Font"', 'monospace'],
+                        'sans': ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @font-face {
+            font-family: 'My Cool Font';
+            src: url('fonts/JumperPERSONALUSEONLY-Black.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        html, body { height: 100%; }
+        body {
+            background-color: #f0e8c3;
+            background-image: 
+                linear-gradient(rgba(44, 42, 40, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(44, 42, 40, 0.04) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col text-retro-ink">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 z-50 bg-[linear-gradient(to_bottom,#7CCDD9,#4AA1E8,#FF8E2B,#FFB82B,transparent)] pb-4">
+        <div class="bg-nathan-orange/90 backdrop-blur-sm border-b-2 border-retro-ink">
+            <div class="max-w-6xl mx-auto p-6 flex flex-col md:flex-row justify-between items-center font-mono uppercase font-bold">
+                <a href="index.html" class="text-5xl tracking-tight mb-4 md:mb-0 flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full border-2 border-retro-bg flex items-center justify-center">
+                        <span class="w-1 h-1 bg-retro-bg rounded-full"></span>
+                    </span>
+                    Starfruit
+                </a>
+                <div class="flex gap-8 text-lg">
+                    <a href="index.html#projects" class="hover:text-retro-coral transition-colors">← Back to Main</a>
+                    <a href="music.html" class="hover:text-retro-coral transition-colors">Music Library</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="max-w-6xl mx-auto w-full px-6 py-12 flex-grow">
+
+        <!-- HEADER SECTION -->
+        <section class="mb-12">
+            <div class="flex flex-col md:flex-row gap-6 justify-between md:items-end mb-6">
+                <div>
+                    <a href="index.html" class="inline-block bg-retro-ink text-retro-yellow px-4 py-2 font-mono font-bold uppercase hover:bg-retro-coral hover:text-white transition-colors border-2 border-retro-ink mb-4">
+                        ← Back
+                    </a>
+                    <h1 class="block bg-overheat-red border-4 border-retro-ink shadow-[6px_6px_0px_#2C2A28] px-6 py-4 font-mono text-4xl md:text-5xl text-white uppercase font-bold w-fit tracking-tighter">
+                        OVERHEAT
+                    </h1>
+                </div>
+                <div class="bg-retro-white border-2 border-retro-ink border-dashed p-4 font-mono text-retro-ink font-bold max-w-sm">
+                    <span class="text-overheat-red block mb-1">>> DEVELOPER: FISHY STUDIOZ</span>
+                    <span class="block mb-1">>> ROLE: AUDIO & OST</span>
+                    <span class="block">>> ENGINE: UNITY</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO HERO BOX -->
+        <section class="w-full border-4 border-retro-ink bg-retro-ink text-retro-white relative p-6 pt-12 md:p-12 mb-16 shadow-[8px_8px_0px_#E62E2E]">
+            <!-- Decorative dots -->
+            <div class="absolute top-4 left-4 flex gap-2">
+                <div class="w-3 h-3 bg-overheat-red rounded-full border border-retro-ink"></div>
+                <div class="w-3 h-3 bg-retro-white rounded-full border border-retro-ink"></div>
+            </div>
+
+            <p class="text-xl md:text-3xl font-sans font-bold leading-relaxed mb-6">
+                A movement shooter taking place in a post-singularity world, designed as a Beat 'em up game.
+            </p>
+            <p class="text-lg md:text-xl font-sans text-retro-white/80 max-w-4xl">
+                Drawing inspiration from Tsutomu Nihei's abstract megastructures and games like God Hand and Titanfall 2, Overheat fulfills the hyper-mobile super soldier fantasy. The game recently migrated from Roblox to Unity to fully realize its complex melee-driven combat loops.
+            </p>
+        </section>
+
+        <!-- GAMEPLAY PILLARS GRID -->
+        <section class="mb-24">
+            <h2 class="w-fit bg-retro-white border-4 border-retro-ink shadow-[6px_6px_0px_#2C2A28] px-6 py-3 font-mono text-3xl text-retro-ink uppercase font-bold mb-8">
+                (Gameplay Pillars)
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Pillar 1 -->
+                <div class="bg-retro-bg border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28] flex flex-col h-full">
+                    <h3 class="font-mono text-2xl font-bold uppercase mb-4 text-overheat-red border-b-4 border-retro-ink pb-2">01. Brawling</h3>
+                    <p class="font-sans text-retro-ink font-medium leading-relaxed">
+                        Gundiver utilizes a wide range of martial arts moves for close-quarters combat. Featuring a unique <strong>"bounce back"</strong> mechanic, melee attacks never halt or reset player momentum, allowing combos to become a seamless extension of movement.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-retro-bg border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28] flex flex-col h-full">
+                    <h3 class="font-mono text-2xl font-bold uppercase mb-4 text-retro-blue border-b-4 border-retro-ink pb-2">02. Gunplay</h3>
+                    <p class="font-sans text-retro-ink font-medium leading-relaxed">
+                        Blending the punchy feel of boomer shooters with modern polish. Weapon slots are limited to two, but each operates as a "hybrid" with multiple unique functions—expanding skill expression without overwhelming the player.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-retro-bg border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28] flex flex-col h-full">
+                    <h3 class="font-mono text-2xl font-bold uppercase mb-4 text-retro-coral border-b-4 border-retro-ink pb-2">03. Mobility</h3>
+                    <p class="font-sans text-retro-ink font-medium leading-relaxed">
+                        Sliding is fully steerable, almost like drifting a car. Dashing is omni-directional. Topped with a fine-tuned momentum conservation system, the game demands fast reaction times and rapid decision-making.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- RECEPTION / MUSIC INTEGRATION -->
+        <section class="mb-16 flex flex-col md:flex-row gap-8">
+            <!-- Left Side: Music context -->
+            <div class="flex-1 bg-nathan-purple text-white border-4 border-retro-ink p-8 shadow-[8px_8px_0px_#2C2A28]">
+                <h2 class="font-mono text-3xl uppercase font-bold mb-6 text-retro-yellow">Our Audio Work</h2>
+                <p class="font-sans text-lg mb-6 leading-relaxed">
+                    A game with action this fast-paced requires a soundtrack that matches its frantic heartbeat. We provide a complete original soundtrack and dynamic sound design tailored to the chaotic combo-driven gameplay.
+                </p>
+                <div class="bg-retro-ink p-6 border-2 border-retro-white">
+                    <span class="font-mono text-retro-yellow text-sm uppercase font-bold mb-2 block">Player Reception:</span>
+                    <blockquote class="font-sans text-xl italic font-bold">
+                        "HOW IS THIS A ROBLOX GAME AND HOW IS THIS MUSIC FOR SAID GAME???"
+                    </blockquote>
+                    <span class="font-mono text-retro-white/50 text-sm mt-2 block">— @BanicAttack</span>
+                </div>
+            </div>
+
+            <!-- Right Side: Stats -->
+            <div class="md:w-1/3 flex flex-col gap-6 font-mono">
+                <div class="bg-retro-white border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28]">
+                    <span class="text-4xl font-bold text-overheat-red block mb-1">31,000+</span>
+                    <span class="text-retro-ink font-bold uppercase">Community Members</span>
+                </div>
+                <div class="bg-retro-white border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28]">
+                    <span class="text-4xl font-bold text-retro-blue block mb-1">96.4%</span>
+                    <span class="text-retro-ink font-bold uppercase">Positive Rating (19k+ Votes)</span>
+                </div>
+                <div class="bg-retro-white border-4 border-retro-ink p-6 shadow-[6px_6px_0px_#2C2A28]">
+                    <span class="text-4xl font-bold text-retro-yellow block mb-1">UNITY</span>
+                    <span class="text-retro-ink font-bold uppercase">Engine Transition (2025)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA TO LISTEN -->
+        <section class="mb-12 text-center border-t-4 border-retro-ink border-dashed pt-12">
+            <h2 class="font-mono text-2xl md:text-3xl font-bold text-retro-ink uppercase mb-6">Listen to the Overheat OST</h2>
+            <a href="music.html" class="inline-block bg-retro-yellow text-retro-ink border-4 border-retro-ink shadow-[8px_8px_0px_#E62E2E] p-6 font-mono text-2xl uppercase font-bold hover:bg-overheat-red hover:text-white hover:shadow-[8px_8px_0px_#2C2A28] hover:-translate-y-1 transition-all">
+                ▶ Open Music Archive
+            </a>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-retro-yellow text-retro-ink border-t-4 border-retro-ink p-8 mt-auto">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-end font-mono font-bold uppercase">
+            <div class="mb-6 md:mb-0">
+                <div class="flex items-center gap-2 mb-2 text-xl">
+                    <span class="bg-retro-ink text-retro-yellow px-2 py-0.5">⚠</span> Michael Chen x Nathan Cheng
+                </div>
+            </div>
+            <div class="flex flex-col items-end">
+                <div class="flex gap-6 mb-4 text-lg">
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">Twitter</a>
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">YouTube</a>
+                    <a href="#" class="hover:text-white transition-colors border-b-2 border-transparent hover:border-white">SoundCloud</a>
+                </div>
+                <!-- Fake barcode/serial for extra aesthetic -->
+                <div class="flex items-end gap-4 mt-4">
+                    <div class="text-xs text-right">
+                        <p>© 2026</p>
+                    </div>
+                    <div class="flex gap-1 h-8 opacity-80">
+                        <div class="w-1 bg-retro-ink"></div><div class="w-2 bg-retro-ink"></div><div class="w-1 bg-retro-ink"></div><div class="w-3 bg-retro-ink"></div><div class="w-1 bg-retro-ink"></div><div class="w-2 bg-retro-ink"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
